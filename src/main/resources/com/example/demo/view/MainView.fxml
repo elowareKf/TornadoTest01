@@ -1,26 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <?import javafx.geometry.Insets?>
 <?import javafx.scene.control.Button?>
 <?import javafx.scene.control.Label?>
 <?import javafx.scene.layout.BorderPane?>
 <?import javafx.scene.layout.VBox?>
 <?import javafx.scene.text.Font?>
-<BorderPane xmlns="http://javafx.com/javafx/null"
-            xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="com.example.demo.view.MainView"
->
+
+<BorderPane xmlns="http://javafx.com/javafx/8.0.172-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.demo.view.MainView">
 
     <padding>
-        <Insets top="20" right="20" bottom="20" left="20"/>
+        <Insets bottom="20" left="20" right="20" top="20" />
     </padding>
 
     <center>
         <VBox alignment="CENTER" spacing="10">
-            <Label text="0" fx:id="counterLabel">
+            <Label fx:id="counterLabel" text="0">
                 <font>
-                    <Font size="20"/>
+                    <Font size="20" />
                 </font>
             </Label>
             <Button onAction="#increment" text="Click to increment" />
+            <Button mnemonicParsing="false" text="Connect to DB" BorderPane.alignment="CENTER" onAction="#connectToDb"/>
+            <Button mnemonicParsing="false" text="Call Api" BorderPane.alignment="CENTER" onAction="#getRestData"/>
         </VBox>
     </center>
 </BorderPane>
